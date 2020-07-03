@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ShareTube</title>
+  <script src="jquery-3.3.1.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular-route.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.3/js/bootstrap.min.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="header-container">
+    <div id="headerBar">
+      <span id="logo">
+        <h1 style="font-size:300%">
+          <b>
+           WeTube
+          </b>
+        </h1>
+		<h2> A premium destination to watch Youtube Videos with your friends simultaneously! </h2>
+		<marquee> Join us fight the battle against Corona Virus. Stay home, stay Safe! </marquee>
+		<h2> Donate to  COVID-19 Relief Funds now!</h2> <a href="https://www.bhimupi.org.in/donation-digitized-with-bhim-upi"> Click Here to donate!</a>
+		<p> A project by Harshita S and Rujula Singh  </p>
+      </span>
+    </div>
+    <br/>
+  </div>
+  <!-- CSS Grid  -->
+  <div class="grid-container">
+    <!-- Hub for Synchronized Actions -->
+    <div id="synch-action-hub">
+      <!-- Synchronous Play -->
+      <div class="jumbotron" align="center" id="synch-search-container">
+        <p>
+          Load another Video
+        </p>
+        <input type="text" class="form-control" id="video-url" placeholder="Enter Youtube video URL without timestamp">
+        <button id="btn-url-submit" class="w3-btn w3-teal">
+          Submit Video
+        </button>
+      </div>
+      <!-- Synchronous Video ID Update -->
+      <div class="jumbotron" align="center" id="synch-action-container">
+        <p>
+          Synchronized Play
+        </p>
+        <div align="center">
+          <button type="button" class="btn btn-default" aria-label="Left Align" id="btn-play">
+            <span class="glyphicon glyphicon-play" aria-hidden="true" id="btn-play-icon"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Container for the Youtube Player -->
+    <div id="player-container">
+      <div id="player"></div>
+    </div>
+    <!-- Container where all the chat stuff is contained -->
+    <div id="chat-container">
+      <!-- Chatbox -->
+      <div id="chat-window">
+        <div id="chat-header">
+          <b>Live-Chat</b>
+        </div>
+        <div id="chat-field"></div>
+        <div id="typing-feedback"></div>
+      </div>
+      <!-- UI for Chat -->
+      <div id="chat-nav">
+        <input class="bottom" type="text" placeholder="Username" onfocus="this.placeholder=''" onfocusout="this.placeholder='Username'"
+          id="username">
+        <input class="bottom" type="text" placeholder="Message" onfocus="this.placeholder=''" onfocusout="this.placeholder='Message'"
+          id="chat-message">
+        <button id="btn-chat-send" class="w3-btn w3-teal">
+          <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Client-side script -->
+  <script src="/client.js"></script>
+</body>
+
+</html>

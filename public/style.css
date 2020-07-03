@@ -1,0 +1,86 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 20% auto 20%;
+    grid-gap: 10px;
+    background-color: #99d8c9;
+    padding: 10px;
+    height: 680px;
+    margin: 0;
+  }
+
+  .grid-container>#synch-action-hub {
+    height: 500%;
+    width: 100%;
+  }
+
+  .grid-container>#player-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 30px;
+  }
+
+  .grid-container>#chat-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: bottom;
+    font-size: 30px;
+  }
+
+  #chat-field {
+    padding: 10px;
+    width: 100%;
+    height: 530px;
+    font-size: 50%;
+    overflow: auto;
+  }
+
+  #typing-feedback {
+    padding-left: 10px;
+    font-size: 50%;
+  }
+
+  #player {
+    width: 100%;
+    height: 100%;
+  }
+
+  #chat-nav {
+    height: 10%;
+  }
+
+  #username {
+    width: 30%;
+    height: 50%;
+    font-size: 60%;
+    margin-left: 5px;
+  }
+
+  #chat-message {
+    width: 45%;
+    height: 50%;
+    font-size: 60%;
+  }
+
+  #btn-chat-send {
+    width: 15%;
+    height: 50%;
+    font-size: 40%;
+  }
+  #btn-url-submit {
+    width: 100%;
+    font-size: 100%;
+  }
+
+  #chat-window {
+    height: 90%;
+  }
+
+  #btn-play {
+    width: 30%;
+  }
+  
+  #chat-header {
+    margin-left: 5px;
+  }
